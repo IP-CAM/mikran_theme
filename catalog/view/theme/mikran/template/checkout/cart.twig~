@@ -44,7 +44,8 @@
                 <td class="text-left">{{ column_quantity }}</td>
                 <td class="text-right">{{ column_price }}</td>
                 <td class="text-right">{{ column_total }}</td>
-		                <td class="text-right">WOW</td>	
+		                <td class="text-right">VAT</td>
+						                <td class="text-right">Cena z VAT</td>	
               </tr>
             </thead>
             <tbody>
@@ -70,7 +71,8 @@
                   </span></div></td>
               <td class="text-right">{{ product.price }}</td>
               <td class="text-right">{{ product.total }}</td>
-	      	                    <td class="text-right">{{ product.price }} {{product.name}}: TAX {{product.zdano}}</td>	
+	      	                    <td class="text-right">{{product.tax_amount}}</td>
+				    	      	                    <td class="text-right">{{product.price_total}}</td>	
             </tr>
             {% endfor %}
             {% for voucher in vouchers %}

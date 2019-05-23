@@ -40,12 +40,14 @@
               <tr>
                 <td class="text-center">{{ column_image }}</td>
                 <td class="text-left">{{ column_name }}</td>
-                <td class="text-left">{{ column_model }}</td>
+                <!-- <td class="text-left">{{ column_model }}</td> -->
+		<td class="text-left">{{ column_mikran_id }}</td>
                 <td class="text-left">{{ column_quantity }}</td>
                 <td class="text-right">{{ column_price }}</td>
                 <td class="text-right">{{ column_total }}</td>
-		                <td class="text-right">VAT</td>
-						                <td class="text-right">Cena z VAT</td>	
+		<td class="text-right">{{ column_tax_rate}}</td>
+		<td class="text-right">{{ column_tax_name}}</td>
+		<td class="text-right">{{ column_total_with_tax}}</td>
               </tr>
             </thead>
             <tbody>
@@ -70,9 +72,10 @@
                   <button type="button" data-toggle="tooltip" title="{{ button_remove }}" class="btn btn-danger" onclick="cart.remove('{{ product.cart_id }}');"><i class="fa fa-times-circle"></i></button>
                   </span></div></td>
               <td class="text-right">{{ product.price }}</td>
-              <td class="text-right">{{ product.total }}</td>
-	      	                    <td class="text-right">{{product.tax_amount}}</td>
-				    	      	                    <td class="text-right">{{product.price_total}}</td>	
+	      <td class="text-right">{{ product.total }}</td>
+	      <td class="text-right">{{ product.tax_rate}}%</td>
+	      <td class="text-right">{{ product.tax_amount}}</td>
+	      <td class="text-right">{{product.price_total}}</td>	
             </tr>
             {% endfor %}
             {% for voucher in vouchers %}
