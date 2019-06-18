@@ -12,3 +12,6 @@ cp ../upload/admin/controller/extension/theme/mikran.php admin/controller/extens
 
 mkdir -p catalog/view/theme/mikran
 cp -R ../upload/catalog/view/theme/mikran catalog/view/theme/
+
+cp ../upload/admin/view/template/customer/customer_form.twig  admin/view/template/customer/
+cp ../upload/admin/view/template/customer/customer_orders.twig admin/view/template/customer/
