@@ -1339,8 +1339,8 @@
     e.preventDefault();
 
     $('#orders').load(this.href);
-  });
-   
+   });
+
    $('#orders').load('index.php?route=customer/customer/orders&user_token={{ user_token }}&customer_id={{ customer_id }}');
 
   $('#content').delegate('button[id^=\'button-custom-field\'], button[id^=\'button-address\']', 'click', function() {
