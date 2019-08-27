@@ -50,7 +50,7 @@
 				<% }else{ %>
 					<% _.each(model.payment_methods, function(payment_method) { %>
 						<div class="radio-input radio">
-							<label for="<%= payment_method.code %>">
+						    <label for="<%= payment_method.code %>">
 								<% if (payment_method.code == model.payment_method.code) { %>
 									<input type="radio" name="payment_method" value="<%= payment_method.code %>" id="<%= payment_method.code %>" checked="checked" class="styled"  data-refresh="6"/>
 								<% } else { %>

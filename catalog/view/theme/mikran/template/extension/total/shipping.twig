@@ -1,8 +1,8 @@
 <div class="panel panel-default">
-  <div class="panel-heading">
+    <div class="panel-heading">
     <h4 class="panel-title"><a href="#collapse-shipping" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion">{{ heading_title }} <i class="fa fa-caret-down"></i></a></h4>
   </div>
-  <div id="collapse-shipping" class="panel-collapse collapse">
+  <div id="_collapse-shipping" class="_panel-collapse _collapse">
     <div class="panel-body">
       <p>{{ text_shipping }}</p>
       <div class="form-horizontal">
@@ -21,7 +21,8 @@
             </select>
           </div>
         </div>
-        <div class="form-group required">
+	<!---
+        <div class="form-group _required">
           <label class="col-sm-2 control-label" for="input-zone">{{ entry_zone }}</label>
           <div class="col-sm-10">
             <select name="zone_id" id="input-zone" class="form-control">
@@ -34,6 +35,7 @@
             <input type="text" name="postcode" value="{{ postcode }}" placeholder="{{ entry_postcode }}" id="input-postcode" class="form-control" />
           </div>
         </div>
+	---->
         <button type="button" id="button-quote" data-loading-text="{{ text_loading }}" class="btn btn-primary">{{ button_quote }}</button>
       </div>
       <script type="text/javascript"><!--

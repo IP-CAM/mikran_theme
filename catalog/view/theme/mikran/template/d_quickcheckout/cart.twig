@@ -25,7 +25,8 @@
 				<% } %>
 			<% } %>
 
-			<table class="table table-bordered qc-cart">
+
+					<table class="table table-bordered qc-cart">
 				<thead>
 					<tr>
 						<td class="qc-image <%= parseInt(model.config.columns.image) ? '' : 'hidden' %>">{{ column_image }}:</td>
@@ -33,7 +34,10 @@
 						<td class="qc-model hidden-xs <%= parseInt(model.config.columns.model) ? '' : 'hidden' %>">{{ column_model }}:</td>
 						<td class="qc-quantity <%= parseInt(model.config.columns.quantity) ? '' : 'hidden' %>">{{ column_quantity }}:</td>
 						<td class="qc-price hidden-xs <%= parseInt(model.config.columns.price) && model.show_price ? '' : 'hidden' %>">{{ column_price }}:</td>
-						<td class="qc-total <%= parseInt(model.config.columns.total) && model.show_price ? '' : 'hidden' %>">{{ column_total }}:</td>
+						<td class="qc-total <%= parseInt(model.config.columns.total) && model.show_price ? '' : 'hidden' %>">{{ column_total }} {{column_total_netto}}</td>
+						<td class="text-right">{{ column_tax_rate}}</td>
+						<td class="text-right">{{ column_tax_name}}</td>
+						<td class="text-right">{{ column_total_with_tax}}</td>
 					</tr>
 				</thead>
 
@@ -85,6 +89,9 @@
 
 						<td class="qc-price hidden-xs <%= parseInt(model.config.columns.price) && model.show_price  ? '' : 'hidden' %>"><%= product.price %></td>
 						<td class="qc-total <%= parseInt(model.config.columns.total) && model.show_price  ? '' : 'hidden' %>"><%= product.total %></td>
+							      <td class="text-right"><%= product.tax_rate %>%</td>
+							      <td class="text-right"><%= product.tax_amount %></td>
+							      <td class="text-right"><%= product.price_total %></td>	
 					</tr>
 					<% }) %>
 					<% _.each(model.vouchers, function(voucher) { %>
